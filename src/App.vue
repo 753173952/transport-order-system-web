@@ -1,29 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div class="login">
+		<form name='form' action="">
+			<input id="username" type="text" placeholder="请输入手机号码或用户名" />
+			<input id='pwd' type="password" placeholder="请输入密码" />
+			<button onclick="login()">登录</button>
+		</form>
+		<div class="account">
+			<p class="forget" style="float:right">忘记密码?</p>
+			<div class="register">
+				<span>还没有账号?</span>
+				<a href="#" rel="external nofollow">手机注册</a>
+			</div>
+		</div>
+		<el-button>默认按钮</el-button>
+		<el-button type="primary">主要按钮</el-button>
+		<el-button type="text">文字按钮</el-button>
+	</div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+
 </style>
